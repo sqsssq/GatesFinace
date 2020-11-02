@@ -6,7 +6,7 @@ CORS(app, supports_credentials=True)
 
 @app.route('/', methods=["GET"])
 def index():
-    return 'Gates Finance'
+    return 'GATES FINANCE TECHNOLOGY'
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
