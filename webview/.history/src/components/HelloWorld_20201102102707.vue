@@ -21,11 +21,11 @@
     </canvas>
     <h2>{{ msg }}</h2>
     <br>
-    <hr style="width:500px;" color="#fff">
+    <hr style="width:500px; color: #fff">
     <h3>
       FINANCE INVESTMENT WITH AI
     </h3>
-    <hr style="width:500px" color="#fff" >
+    <hr style="width:500px">
     <br>
     <br>
     <!-- <a href="#" style="text-decoration:none;"><h3>Start</h3></a> -->
