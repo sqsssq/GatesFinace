@@ -12,10 +12,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" style="height:100%"/> -->
     <gatesNavbar />
     <div class="row" style="margin-top: 5px;">
-      <div class="col"  style="padding-left: 0px; padding-right: 0px;">
-      </div>
-      <gatesCarousel />
-      <div class="col" style="padding-left: 0px; padding-right: 0px;"></div>
+      
     </div>
   </div>
 </template>

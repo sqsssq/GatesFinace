@@ -10,12 +10,12 @@
   <div class="container-fiuled" style="height: 100%;">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" style="height:100%"/> -->
-    <gatesNavbar />
-    <div class="row" style="margin-top: 5px;">
-      <div class="col"  style="padding-left: 0px; padding-right: 0px;">
+    <gatesNavbar style="height: 100%" />
+    <div class="row" style="margin-top: 10px;">
+      <div class="col" style="border: 1px black;">
       </div>
-      <gatesCarousel />
-      <div class="col" style="padding-left: 0px; padding-right: 0px;"></div>
+      <gatesCarousal />
+      <div class="col"></div>
     </div>
   </div>
 </template>
@@ -24,13 +24,13 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import gatesNavbar from '@/components/gatesNavbar.vue'
-import gatesCarousel from '@/components/gatesCarousel.vue'
+import gatesCarousal from '@/components/gatesCarousl.vue'
 
 export default {
   name: 'Home',
   components: {
     gatesNavbar,
-    gatesCarousel
+    gatesCarousal
   }
 }
 </script>

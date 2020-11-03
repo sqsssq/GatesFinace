@@ -1,0 +1,134 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-10-31 09:19:12
+ * @LastEditTime: 2020-11-03 08:28:33
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \webview\src\components\HelloWorld.vue
+-->
+<template>
+<div>
+  <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item href="#">Link</b-nav-item>
+        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+        <b-nav-form>
+          <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
+          <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+        </b-nav-form>
+
+        <b-nav-item-dropdown text="Lang" right>
+          <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+        </b-nav-item-dropdown>
+
+        <b-nav-item-dropdown right>
+          <!-- Using 'button-content' slot -->
+          <template #button-content>
+            <em>User</em>
+          </template>
+          <b-dropdown-item href="#">Profile</b-dropdown-item>
+          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
+</template>
+
+<script>
+import axios from 'axios';
+export default {
+  // name: 'HelloWorld',
+  // props: {
+  //   msg: String
+  // }
+  data () {
+    return {
+      msg: ''
+    }
+  },
+  methods: {
+    getmsg () {
+      // console.log(1);
+      const path = 'http://8.131.79.148:5000/';
+      axios.get(path)
+        .then(res => {
+          console.log(res.data);
+          this.msg = res.data;
+        })
+        .catch(error => {
+          console.log(error);
+        })
+      // console.log(this.msg)
+    },
+    createLogo () {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = "3";
+      ctx.moveTo(100, 20);
+      ctx.lineTo(0, 100);
+      ctx.lineTo(200, 100);
+      ctx.lineTo(100, 180);
+      ctx.lineTo(100, 20);
+      ctx.stroke();
+      
+    }
+  },
+  created () {
+    // console.log(2);
+    // this.getmsg();
+  },
+  mounted () {
+    
+    // this.createLogo();
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="stylus">
+h3 {
+  letter-spacing: 3px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+h2 {
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 10px;
+  // font-size: 40px
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
