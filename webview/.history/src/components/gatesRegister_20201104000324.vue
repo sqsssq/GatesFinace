@@ -10,19 +10,11 @@
   <div>
     <b-card
       border-variant="secondary"
-      header="登陆"
+      header="注册"
       header-border-variant="secondary"
       align="center"
-      style="width: 300px;"
     >
-      <div>
-        <!-- <b-input-group
-          prepend="用户"
-          class="mt-3"
-        >
-          <b-form-input v-model="loginData.username"></b-form-input>
-        </b-input-group> -->
-        <el-input
+      <el-input
           placeholder="请输入用户名"
           prefix-icon="el-icon-user"
           v-model="loginData.username"
@@ -51,10 +43,7 @@
           style="width: 100px;"
         >登陆</b-button> -->
         <el-button type="primary" icon="el-icon-edit" round @click="login()" style="margin-top: 10px;">登陆</el-button>
-        <br>
-        <b-card-text style="font-size: 12px; margin-top: 10px;">还没有账号？请<router-link to="/register">注册</router-link>
-        </b-card-text>
-      </div>
+        
     </b-card>
 
   </div>
@@ -64,7 +53,7 @@
 import axios from 'axios';
 import global from './Global.vue';
 export default {
-  name: 'gatesLogin',
+  name: 'gatesRegister',
   // props: {
   //   msg: String
   // }
@@ -90,7 +79,7 @@ export default {
           .then((res) => {
             // console.log(res);
             if (res.data.status == true) {
-              // alert('登陆成功');
+              alert('登陆成功');
               this.$store.commit('setUserData', res.data);
               this.$router.push('/main')
             } else {
@@ -112,4 +101,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="stylus"></style>
+<style scoped lang="stylus">
+
+</style>

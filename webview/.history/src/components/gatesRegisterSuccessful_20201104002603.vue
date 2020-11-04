@@ -10,51 +10,20 @@
   <div>
     <b-card
       border-variant="secondary"
-      header="登陆"
+      header="注册成功"
       header-border-variant="secondary"
       align="center"
       style="width: 300px;"
     >
-      <div>
-        <!-- <b-input-group
-          prepend="用户"
-          class="mt-3"
-        >
-          <b-form-input v-model="loginData.username"></b-form-input>
-        </b-input-group> -->
-        <el-input
+      <el-input
           placeholder="请输入用户名"
           prefix-icon="el-icon-user"
-          v-model="loginData.username"
+          v-model="loginData.username" required
         >
         </el-input>
-        <!-- <b-input-group
-          prepend="密码"
-          class="mt-3"
-        >
-          <b-form-input
-            v-model="loginData.password"
-            type="password"
-          ></b-form-input>
-        </b-input-group> -->
-        <el-input
-          placeholder="请输入密码"
-          prefix-icon="el-icon-key"
-          v-model="loginData.password"
-          style="margin-top: 10px;"
-          type="password"
-        >
-        </el-input>
-        <!-- <b-button
-          @click="login()"
-          variant="outline-primary"
-          style="width: 100px;"
-        >登陆</b-button> -->
-        <el-button type="primary" icon="el-icon-edit" round @click="login()" style="margin-top: 10px;">登陆</el-button>
-        <br>
-        <b-card-text style="font-size: 12px; margin-top: 10px;">还没有账号？请<router-link to="/register">注册</router-link>
-        </b-card-text>
-      </div>
+        
+        <el-button type="sucess" icon="el-icon-check" style="margin-top: 10px;">注册</el-button>
+        
     </b-card>
 
   </div>
@@ -64,7 +33,7 @@
 import axios from 'axios';
 import global from './Global.vue';
 export default {
-  name: 'gatesLogin',
+  name: 'gatesRegister',
   // props: {
   //   msg: String
   // }
@@ -72,7 +41,8 @@ export default {
     return {
       loginData: {
         username: '',
-        password: ''
+        password: '',
+        email: ''
       }
     }
   },
@@ -82,9 +52,9 @@ export default {
       // console.log(this.loginData.password);
       let _this = this;
       if (_this.loginData.username == '' || _this.loginData.password == '') {
-        alert('账号或密码不能为空');
+        // alert('账号或密码不能为空');
       } else {
-        const path = global.urlPath + '/login'
+        const path = global.urlPath + '/register'
         console.log(this.loginData);
         axios.post(path, this.loginData)
           .then((res) => {
@@ -92,10 +62,13 @@ export default {
             if (res.data.status == true) {
               // alert('登陆成功');
               this.$store.commit('setUserData', res.data);
-              this.$router.push('/main')
+              this.$router.push('/login')
             } else {
-              alert("登录失败")
+              alert("注册失败")
             }
+          })
+          .catch(error => {
+            alert('注册失败');
           })
       }
     }
@@ -112,4 +85,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="stylus"></style>
+<style scoped lang="stylus">
+
+</style>

@@ -42,7 +42,6 @@
           prefix-icon="el-icon-key"
           v-model="loginData.password"
           style="margin-top: 10px;"
-          type="password"
         >
         </el-input>
         <!-- <b-button

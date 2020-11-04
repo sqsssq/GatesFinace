@@ -13,7 +13,6 @@
       header="登陆"
       header-border-variant="secondary"
       align="center"
-      style="width: 300px;"
     >
       <div>
         <!-- <b-input-group
@@ -24,11 +23,11 @@
         </b-input-group> -->
         <el-input
           placeholder="请输入用户名"
-          prefix-icon="el-icon-user"
+          prefix-icon="el-icon-search"
           v-model="loginData.username"
         >
-        </el-input>
-        <!-- <b-input-group
+        </el-input> 
+        <b-input-group
           prepend="密码"
           class="mt-3"
         >
@@ -36,21 +35,13 @@
             v-model="loginData.password"
             type="password"
           ></b-form-input>
-        </b-input-group> -->
-        <el-input
-          placeholder="请输入密码"
-          prefix-icon="el-icon-key"
-          v-model="loginData.password"
-          style="margin-top: 10px;"
-          type="password"
-        >
-        </el-input>
-        <!-- <b-button
+        </b-input-group>
+        <br>
+        <b-button
           @click="login()"
           variant="outline-primary"
           style="width: 100px;"
-        >登陆</b-button> -->
-        <el-button type="primary" icon="el-icon-edit" round @click="login()" style="margin-top: 10px;">登陆</el-button>
+        >登陆</b-button>
         <br>
         <b-card-text style="font-size: 12px; margin-top: 10px;">还没有账号？请<router-link to="/register">注册</router-link>
         </b-card-text>

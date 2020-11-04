@@ -42,7 +42,6 @@
           prefix-icon="el-icon-key"
           v-model="loginData.password"
           style="margin-top: 10px;"
-          type="password"
         >
         </el-input>
         <!-- <b-button
@@ -50,7 +49,7 @@
           variant="outline-primary"
           style="width: 100px;"
         >登陆</b-button> -->
-        <el-button type="primary" icon="el-icon-edit" round @click="login()" style="margin-top: 10px;">登陆</el-button>
+        <el-button type="primary" icon="el-icon-edit" round @click="login()" style="margin-top: 10px; height: 10px;">登陆</el-button>
         <br>
         <b-card-text style="font-size: 12px; margin-top: 10px;">还没有账号？请<router-link to="/register">注册</router-link>
         </b-card-text>

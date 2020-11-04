@@ -54,7 +54,7 @@
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template #button-content>
-              <em>{{ username == '' ? '登陆' : username }}</em>
+              <em>{{ username == '' ? '<h1>登陆</h1>' : username }}</em>
             </template>
             <b-dropdown-item href="#">
               <router-link to="/login">登陆</router-link>

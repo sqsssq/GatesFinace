@@ -5,7 +5,6 @@ import Main from '../views/main.vue'
 import Login from '../views/login.vue'
 import Logout from '../components/gatesLogout.vue'
 import Register from '../views/register.vue'
-import RegisterSuccessful from '../views/registerSuccess.vue';
 
 Vue.use(VueRouter)
 
@@ -45,11 +44,6 @@ const routes = [
     path: '/register',
     name: Register,
     component: Register
-  },
-  {
-    path: '/registerSuccessful',
-    name: RegisterSuccessful,
-    component: RegisterSuccessful
   }
 ]
 
