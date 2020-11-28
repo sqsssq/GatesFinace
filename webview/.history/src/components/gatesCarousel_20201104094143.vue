@@ -1,14 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-31 09:19:12
- * @LastEditTime: 2020-11-04 09:42:08
+ * @LastEditTime: 2020-11-04 09:41:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webview\src\components\HelloWorld.vue
 -->
 <template>
   <div class="col-7" style="padding-left: 0px; padding-right: 0px;">
-    
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -34,12 +33,11 @@
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">
-        <h1>GATES FINACE</h1></b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <!-- <b-carousel-slide>
+      <b-carousel-slide>
         <template #img>
           <img
             class="d-block img-fluid w-100"
@@ -49,7 +47,7 @@
             alt="image slot"
           >
         </template>
-      </b-carousel-slide> -->
+      </b-carousel-slide>
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       <!-- <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">

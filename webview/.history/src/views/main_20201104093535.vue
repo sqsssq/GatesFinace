@@ -16,9 +16,7 @@
         <gatesLeft/>
       </div>
       <gatesCarousel />
-      <div class="col" style="padding-left: 0px; padding-right: 0px;">
-        <gatesRight />
-      </div>
+      <div class="col" style="padding-left: 0px; padding-right: 0px;"></div>
     </div>
   </div>
 </template>
@@ -28,7 +26,6 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import gatesNavbar from '@/components/gatesNavbar.vue'
 import gatesCarousel from '@/components/gatesCarousel.vue'
-import gatesRight from '@/components/gatesRight.vue'
 import gatesLeft from '@/components/gatesLeft.vue'
 
 export default {
@@ -36,7 +33,6 @@ export default {
   components: {
     gatesNavbar,
     gatesCarousel,
-    gatesRight,
     gatesLeft
   }
 }

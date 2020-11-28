@@ -8,7 +8,6 @@
 -->
 <template>
   <div class="col-7" style="padding-left: 0px; padding-right: 0px;">
-    
     <b-carousel
       id="carousel-1"
       v-model="slide"

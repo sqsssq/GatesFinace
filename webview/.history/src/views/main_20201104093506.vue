@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-01 17:40:45
- * @LastEditTime: 2020-11-04 09:35:35
+ * @LastEditTime: 2020-11-04 09:35:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webview\src\views\main.vue
@@ -13,12 +13,9 @@
     <gatesNavbar />
     <div class="row" style="margin-top: 5px;">
       <div class="col"  style="padding-left: 0px; padding-right: 0px;">
-        <gatesLeft/>
       </div>
       <gatesCarousel />
-      <div class="col" style="padding-left: 0px; padding-right: 0px;">
-        <gatesRight />
-      </div>
+      <div class="col" style="padding-left: 0px; padding-right: 0px;"></div>
     </div>
   </div>
 </template>
@@ -28,7 +25,6 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import gatesNavbar from '@/components/gatesNavbar.vue'
 import gatesCarousel from '@/components/gatesCarousel.vue'
-import gatesRight from '@/components/gatesRight.vue'
 import gatesLeft from '@/components/gatesLeft.vue'
 
 export default {
@@ -36,7 +32,6 @@ export default {
   components: {
     gatesNavbar,
     gatesCarousel,
-    gatesRight,
     gatesLeft
   }
 }

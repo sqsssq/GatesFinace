@@ -13,7 +13,7 @@
     <gatesNavbar />
     <div class="row" style="margin-top: 5px;">
       <div class="col"  style="padding-left: 0px; padding-right: 0px;">
-        <gatesLeft/>
+        <!-- <gatesLeft/> -->
       </div>
       <gatesCarousel />
       <div class="col" style="padding-left: 0px; padding-right: 0px;">
@@ -29,15 +29,13 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import gatesNavbar from '@/components/gatesNavbar.vue'
 import gatesCarousel from '@/components/gatesCarousel.vue'
 import gatesRight from '@/components/gatesRight.vue'
-import gatesLeft from '@/components/gatesLeft.vue'
 
 export default {
   name: 'Home',
   components: {
     gatesNavbar,
     gatesCarousel,
-    gatesRight,
-    gatesLeft
+    gatesRight
   }
 }
 </script>
